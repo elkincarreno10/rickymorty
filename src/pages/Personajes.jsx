@@ -55,7 +55,7 @@ const Personajes = () => {
             <option value="dead">Dead</option>
             <option value="unknown">Unknown</option>
           </select>
-          <img className="w-6 cursor-pointer" src="../src/img/lupa.png" alt="Buscador" onClick={buscar} />
+          <img className="w-6 cursor-pointer" src="../img/lupa.png" alt="Buscador" onClick={buscar} />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {personajes.map(personaje => (

@@ -22,12 +22,12 @@ const Header = ({nombre}) => {
         <div className="max-w-4xl flex flex-col gap-5 md:gap-0 md:flex-row md:justify-between mx-auto items-center">
             <div className="flex flex-col md:flex-row items-center gap-3">
               <Link to='/app/personajes'>
-                  <img className="w-20" src="../src/img/logo.png" alt="Logo de la app" />
+                  <img className="w-20" src="../img/logo.png" alt="Logo de la app" />
               </Link>
               <p className="text-base font-bold">Bienvenido: <span className="font-extrabold text-yellow-900">{nombre}</span></p>
             </div>
 
-            <img className='block w-10 md:hidden cursor-pointer' src="../src/img/menu.png" alt="Menú" onClick={mostrarMenu} />
+            <img className='block w-10 md:hidden cursor-pointer' src="../img/menu.png" alt="Menú" onClick={mostrarMenu} />
 
             <nav className={`${menu ? 'hidden' : 'flex'} md:flex flex-col md:flex-row text-center gap-3 md:gap-6 items-center`}>
                 <Link className={`${location.pathname === '/app/personajes' ? 'text-gray-700 border-b border-gray-700' : ''} hover:text-gray-700 text-sm font-bold uppercase`} to='/app/personajes'>Personajes</Link>
