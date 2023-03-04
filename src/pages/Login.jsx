@@ -2,7 +2,12 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Alerta from "../components/Alerta"
 import { generarToken } from "../helpers"
-import axios from "axios"
+
+const usuarios = [
+    {email: 'correo@correo.com', password: 'password', nombre: 'Elkin'},
+    {email: 'correo2@correo.com', password: '123456', nombre: 'Fabian'},
+    {email: 'picon@picon.com', password: '12345678', nombre: 'Picón'}
+]
 
 const Login = () => {
 
@@ -25,8 +30,6 @@ const Login = () => {
             }, 3000);
             return
         }
-
-        const { data: usuarios } = await axios('../src/login.json')
 
         const usuario = usuarios.filter(user => user.email === email)
 
