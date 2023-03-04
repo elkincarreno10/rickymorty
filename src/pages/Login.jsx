@@ -26,7 +26,7 @@ const Login = () => {
             return
         }
 
-        const { data: usuarios } = await axios('../login.json')
+        const { data: usuarios } = await axios('./src/login.json')
 
         const usuario = usuarios.filter(user => user.email === email)
 
